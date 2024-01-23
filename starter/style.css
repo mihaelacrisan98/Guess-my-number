@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  color: #eee;
+  background-color: #222;
+  /* background-color: #60b347; */
+}
+
+/* LAYOUT */
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
+
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  width: 52rem;
+  font-size: 2rem;
+}
+
+/* ELEMENTS STYLE */
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  font-size: 6rem;
+  width: 15rem;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.between {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.again {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.guess {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 5rem;
+  padding: 2.5rem;
+  width: 25rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.message {
+  margin-bottom: 8rem;
+  height: 3rem;
+}
+
+.label-score {
+  margin-bottom: 2rem;
+}
+/* Ecrane mari */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 1.6rem; /* Resetare la dimensiunea fontului de bază pentru ecrane mari */
+  }
+
+  header {
+    height: 20vh; /* Ajustează înălțimea antetului pentru ecrane mari */
+  }
+
+  main {
+    height: 80vh; /* Ajustează înălțimea conținutului principal pentru ecrane mari */
+  }
+
+  .left {
+    width: 40rem; /* Ajustează lățimea secțiunii stânga pentru ecrane mari */
+  }
+
+  .right {
+    width: 40rem; /* Ajustează lățimea secțiunii dreapta pentru ecrane mari */
+  }
+}
+
+/* Ecrane medii */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  body {
+    font-size: 1.4rem; /* Ajustează dimensiunea fontului pentru ecrane medii */
+  }
+
+  header {
+    height: 15vh; /* Ajustează înălțimea antetului pentru ecrane medii */
+  }
+
+  main {
+    height: 85vh; /* Ajustează înălțimea conținutului principal pentru ecrane medii */
+  }
+
+  .left,
+  .right {
+    width: 100%; /* Ocupă întreaga lățime pentru ecrane medii */
+  }
+
+  .guess {
+    width: 100%; /* Ocupă întreaga lățime pentru ecrane medii */
+  }
+}
+
+/* Ecrane mici */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 1.2rem; /* Ajustează dimensiunea fontului pentru ecrane mici */
+  }
+
+  header {
+    height: 27vh; /* Ajustează înălțimea antetului pentru ecrane mici */
+  }
+
+  main {
+    height: auto; /* Ajustează înălțimea conținutului principal pentru ecrane mici */
+  }
+
+  h1 {
+    font-size: 3rem; /* Ajustează dimensiunea fontului pentru ecrane mici */
+  }
+
+  .number {
+    font-size: 4rem; /* Ajustează dimensiunea fontului pentru ecrane mici */
+    width: 10rem; /* Ajustează lățimea pentru ecrane mici */
+    padding: 2rem 0rem; /* Ajustează padding-ul pentru ecrane mici */
+  }
+
+  .between {
+    font-size: 1rem; /* Ajustează dimensiunea fontului pentru ecrane mici */
+  }
+
+  .again {
+    font-size: 1rem; /* Ajustează dimensiunea fontului pentru ecrane mici */
+    top: 1rem; /* Ajustează poziția pentru ecrane mici */
+    left: -3rem; /* Ajustează poziția pentru ecrane mici */
+    transform: scale(0.5);
+  }
+
+  .guess {
+    font-size: 3rem; /* Ajustează dimensiunea fontului pentru ecrane mici */
+    padding: 1.5rem; /* Ajustează padding-ul pentru ecrane mici */
+    width: 80%; /* Ajustează lățimea pentru ecrane mici */
+  }
+
+  .btn {
+    font-size: 1.5rem; /* Ajustează dimensiunea fontului pentru ecrane mici */
+    padding: 1.5rem 2rem; /* Ajustează padding-ul pentru ecrane mici */
+  }
+  .message {
+    margin-top: 50px;
+  }
+}
